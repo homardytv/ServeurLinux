@@ -22,6 +22,7 @@ Source : [`_docs/plan-action.md`](_docs/plan-action.md)
 | Ubuntu | `192.168.1.162/24`, interface `eno1`, adresse DHCP |
 | Résolution locale | Nom d'hôte résolu correctement depuis Windows |
 | SSH | OpenSSH actif et port 22 accessible depuis Windows |
+| Wake-on-LAN | Activé manuellement sur `eno1` (`Wake-on: g`) ; persistance après redémarrage à définir |
 | Sudo | Accès complet pour `serveur-nino`, mais aucune automatisation privilégiée autorisée |
 | Hamachi | Hors périmètre initial |
 
@@ -141,7 +142,7 @@ Critère de clôture : accès opérationnel, documenté, contrôlé et révocabl
 ## Configuration RustDesk
 
 - [x] RustDesk 1.3.9 vérifié actif sur la cible.
-- [x] Autostart utilisateur créé dans `~/.config/autostart/rustdesk.desktop`.
+- [x] Autostart utilisateur créé et vérifié dans `~/.config/autostart/rustdesk.desktop` (propriétaire `serveur-nino`, permissions `600`).
 - [x] Commande configurée : `/usr/bin/rustdesk --tray`.
 - [ ] Valider le lancement après une déconnexion puis reconnexion graphique.
 - ⚠️ Le lancement avant connexion reste hors périmètre : il nécessiterait une configuration privilégiée.
@@ -156,8 +157,12 @@ toute modification distante.
 
 ### 11 août 2026
 
+- [x] RustDesk contrôlé actif ; son fichier d'autostart utilisateur, initialement absent, a été créé après confirmation et vérifié. Le témoin de l'état initial absent est conservé ; validation après reconnexion graphique restante.
+
 - [x] Vérification de démarrage non intrusive réussie : résolution, port SSH et
   identité `serveur-nino` validés ; aucune modification distante effectuée.
+- [x] Wake-on-LAN activé manuellement par l’utilisateur sur `eno1` et confirmé
+  avec `Wake-on: g` ; aucune persistance après redémarrage n’est encore définie.
 - [ ] ⏳ Test de révocation maintenu en attente par décision utilisateur : accès
   de secours et retour arrière à définir avant confirmation explicite.
 
