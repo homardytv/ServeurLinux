@@ -156,6 +156,11 @@ toute modification distante.
 
 ### 11 août 2026
 
+- [x] Vérification de démarrage non intrusive réussie : résolution, port SSH et
+  identité `serveur-nino` validés ; aucune modification distante effectuée.
+- [ ] ⏳ Test de révocation maintenu en attente par décision utilisateur : accès
+  de secours et retour arrière à définir avant confirmation explicite.
+
 - [x] Clôture de la zone par défaut effectuée : contexte compacté et gestion
   des zones confirmée pour `start [zone]` et `close [zone]`.
 

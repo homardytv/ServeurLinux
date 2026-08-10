@@ -3,7 +3,8 @@
 ## État
 
 - M1 à M5 sont validés dans le périmètre non privilégié ; M4 est terminé.
-- M6 est documenté ; le test de révocation est reporté, faute d'accès de secours.
+- M6 est documenté ; la connexion SSH a été revalidée le 11 août 2026.
+- Le test de révocation reste reporté par décision utilisateur, faute d'accès de secours validé.
 - RustDesk 1.3.9 est configuré pour démarrer à la prochaine ouverture de session graphique de `serveur-nino`.
 - Les commandes `start [zone]` et `close [zone]` résolvent strictement leur zone dans `zone.md`, sans repli implicite.
 - La vérification de connexion via `_commands/start.md` est obligatoire avant toute session SSH.
