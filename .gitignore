@@ -1,0 +1,19 @@
+# Configuration locale susceptible de contenir des données sensibles
+.env
+.env.*
+!.env.example
+.ssh_known_hosts
+.ssh/
+
+# Clés privées SSH et formats de certificats privés courants
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Journal local d'exécution SSH, sans contenu de commande ni sorties distantes
+_logs/
