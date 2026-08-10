@@ -1,0 +1,1 @@
+Controler un pc qui tourne sous linux en utilisant ce protocole https://github.com/ServOMorph/ai-ssh-control.
