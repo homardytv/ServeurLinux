@@ -2,33 +2,28 @@
 
 ## État
 
-- M1 à M5 sont validés dans le périmètre non privilégié ; M4 est terminé.
-- M6 est documenté ; la connexion SSH a été revalidée le 11 août 2026.
-- RustDesk 1.3.9 est actif et son autostart utilisateur a été créé puis contrôlé.
-- Le test de révocation reste reporté par décision utilisateur, faute d'accès de secours validé.
+- SSH non privilégié opérationnel ; M1 à M5 validés et M6 documenté.
+- RustDesk 1.3.9 est actif ; son autostart utilisateur est créé et vérifié.
+- Les zones `défaut`, `config` et `arduino` sont définies ; un rôle optionnel est chargé au démarrage.
 
 ## Cible et accès
 
-- Cible unique : Ubuntu 24.04.1 LTS, `serveur-nino-HP-Compaq-8200-Elite-SFF-PC`.
-- Compte distant : `serveur-nino` ; port SSH : `22` ; adresse DHCP observée : `192.168.1.162`.
-- Configuration locale : `.env` ; clé d'hôte vérifiée : `.ssh_known_hosts`.
-- Autostart RustDesk : `/home/serveur-nino/.config/autostart/rustdesk.desktop`, commande `/usr/bin/rustdesk --tray`, propriétaire `serveur-nino`, permissions `600`.
-- Le témoin de l'état initial absent est conservé dans le dossier d'autostart pour le retour arrière.
+- Ubuntu 24.04.1 LTS : `serveur-nino-HP-Compaq-8200-Elite-SFF-PC` ; compte `serveur-nino` ; SSH 22.
+- La configuration SSH est locale (`.env`) ; clé d'hôte dans `.ssh_known_hosts`.
+- Autostart RustDesk : `/home/serveur-nino/.config/autostart/rustdesk.desktop` ; `/usr/bin/rustdesk --tray` ; permissions `600`.
 
 ## Règles
 
-- Vérifier la résolution et le port avant chaque connexion SSH ; utiliser uniquement la cible et le compte définis dans `.env`.
-- Aucun `sudo`, aucune commande interactive, aucune désactivation de la vérification de clé d'hôte.
-- Toute modification distante exige une confirmation explicite, une sauvegarde et un retour arrière documentés.
-- Ne jamais versionner ni consigner de secret ou clé privée.
+- Respecter `AGENTS.md` ; ne jamais lire, versionner ou consigner de secret.
+- Avant SSH : résolution et port ; commandes non interactives, sans `sudo` ni contournement de clé d'hôte.
+- Toute modification distante exige confirmation, sauvegarde et retour arrière.
 
-## Éléments terminés
+## Réalisé
 
-- Exécution SSH non interactive encadrée, tests M1 à M5 et documentation d'exploitation disponibles.
-- Zones strictes définies dans `zone.md` ; la vérification de connexion est obligatoire au démarrage.
-- Autostart RustDesk créé de manière réversible après confirmation et vérifié.
+- Vérification SSH, exécution encadrée, tests M1–M5 et documentation d'exploitation disponibles.
+- `start`, `close` et `majAgent` utilisent le registre `zone.md` ; les rôles sont maintenables par zone.
 
-## Blocages et prochaine action
+## Blocage et prochaine action
 
-- Valider RustDesk après déconnexion puis reconnexion graphique de `serveur-nino`.
-- Avant le test de révocation, définir un accès de secours valide et le retour arrière, puis demander confirmation explicite.
+- Révocation SSH reportée : accès de secours et retour arrière à valider.
+- Prochaine action : valider RustDesk après déconnexion puis reconnexion graphique de `serveur-nino`.

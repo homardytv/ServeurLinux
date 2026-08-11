@@ -1,6 +1,7 @@
 Parle en français.
 Ton professionel et synthétique.
 Reste dans le dossier SERVEURLINUX, interdiction d'écriture à l'exterieure (RAM, VRAM, disque dur).
+Ne lis pas C:\Users\ninor\Desktop\tout\doc\autres\serveurs\ServeurLinux\.env .
 
 Pour les opérations SSH :
 - Utilise uniquement la cible et le compte définis dans la configuration locale `.env`.

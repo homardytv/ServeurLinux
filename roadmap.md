@@ -157,6 +157,10 @@ toute modification distante.
 
 ### 11 août 2026
 
+- [x] Zones `config` et `arduino` ajoutées au registre ; `start`, `close` et
+  `majAgent` rendus génériques, avec rôle optionnel par zone. Le rôle Arduino
+  est défini pour l'ESP32 D1 R32.
+
 - [x] RustDesk contrôlé actif ; son fichier d'autostart utilisateur, initialement absent, a été créé après confirmation et vérifié. Le témoin de l'état initial absent est conservé ; validation après reconnexion graphique restante.
 
 - [x] Vérification de démarrage non intrusive réussie : résolution, port SSH et
