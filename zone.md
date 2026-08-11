@@ -1,20 +1,9 @@
-# Zones de travail
+# Zones `start`
 
-Ce fichier est la source de vérité des zones utilisables par la commande
-`start`. Une zone ne donne accès qu'aux fichiers explicitement définis pour
-elle. Il n'existe aucun repli vers la zone par défaut.
+Isolation stricte, sans repli. Format : `zone : dossier — infos ; roadmap`.
 
-## Zone par défaut (sans nom)
+- défaut : `.` — `_context/infos.md` ; `roadmap.md` obligatoire.
+- `config` : `CONFIG` — `_contextConfig/infosConfig.md` ; `roadmap.md` optionnelle.
+- `arduino` : `ARDUINO` — `_contextArduino/infosArduino.md` ; `roadmap.md` optionnelle.
 
-- Dossier : `C:\Users\ninor\Desktop\tout\doc\autres\serveurs\ServeurLinux`
-- Informations : `_context/infos.md`
-- Feuille de route : `roadmap.md`
-
-## Zone `config`
-
-- Dossier : `C:\Users\ninor\Desktop\tout\doc\autres\serveurs\ServeurLinux\CONFIG`
-- Informations : `_contextConfig/infosConfig.md`
-- Feuille de route : `roadmap.md` (optionnelle)
-
-Si le fichier de feuille de route optionnel est absent, la commande le signale
-et poursuit uniquement avec les informations de la zone `config`.
+Roadmap optionnelle absente : signaler, puis poursuivre avec les informations de la zone.
