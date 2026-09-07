@@ -149,16 +149,19 @@ Critère de clôture : accès opérationnel, documenté, contrôlé et révocabl
 
 ## Prochaine action
 
-Lever le conflit entre la procédure de vérification SSH, qui exige la lecture
-de `.env`, et `AGENTS.md`, qui l'interdit. Définir une vérification compatible
-sans exposer de secret avant toute nouvelle connexion SSH.
-
-Ensuite, valider RustDesk après une déconnexion puis reconnexion graphique. Le
-test de révocation reste reporté : définir et valider un accès de secours et le
-retour arrière, puis demander une confirmation explicite avant toute
-modification distante.
+Valider RustDesk après une déconnexion puis reconnexion graphique. Le test de
+révocation reste reporté : définir et valider un accès de secours et le retour
+arrière, puis demander une confirmation explicite avant toute modification
+distante.
 
 ## Journal de suivi
+
+### 7 septembre 2026
+
+- [x] Vérification de démarrage non intrusive renouvelée : résolution, port
+  SSH et identité validés ; aucune modification distante effectuée.
+- [x] Demande d'installation de Roblox évaluée : Roblox n'est pas pris en
+  charge sous Linux ; aucune installation ni commande distante n'a été lancée.
 
 ### 11 août 2026
 
