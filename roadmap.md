@@ -149,9 +149,14 @@ Critère de clôture : accès opérationnel, documenté, contrôlé et révocabl
 
 ## Prochaine action
 
-Test de révocation reporté. Lorsqu'il sera repris, définir et valider un accès
-de secours et le retour arrière, puis demander une confirmation explicite avant
-toute modification distante.
+Lever le conflit entre la procédure de vérification SSH, qui exige la lecture
+de `.env`, et `AGENTS.md`, qui l'interdit. Définir une vérification compatible
+sans exposer de secret avant toute nouvelle connexion SSH.
+
+Ensuite, valider RustDesk après une déconnexion puis reconnexion graphique. Le
+test de révocation reste reporté : définir et valider un accès de secours et le
+retour arrière, puis demander une confirmation explicite avant toute
+modification distante.
 
 ## Journal de suivi
 
